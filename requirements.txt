@@ -28,14 +28,6 @@
 
 
 
-
-
-
-
-
-
-
-
 flask
 flask-cors
 requests
@@ -50,12 +42,21 @@ requests
 
 
 
-
-
-
-
-
-
-
 +0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
