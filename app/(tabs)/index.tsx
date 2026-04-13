@@ -12,7 +12,8 @@ export default function HomeScreen() {
 
   const sendMessage = () => {
 
-    fetch("http://192.168.1.6:5000/chat", {
+    fetch("https://abu-ai-app.onrender.com/chat, {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,36 +85,46 @@ export default function HomeScreen() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 +0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
