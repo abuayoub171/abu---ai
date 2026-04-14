@@ -1,8 +1,3 @@
-
-
-
-
-
 import { useState } from "react";
 import { View, Text, TextInput, Button } from "react-native";
 
@@ -12,7 +7,7 @@ export default function HomeScreen() {
 
   const sendMessage = () => {
 
-    fetch("https://abu-ai-app.onrender.com/chat, {
+    fetch("https://abu-ai-app.onrender.com/chat", {
 
       method: "POST",
       headers: {
@@ -85,7 +80,37 @@ export default function HomeScreen() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 +0
+
+
+
 
 
 
