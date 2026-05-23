@@ -14,67 +14,42 @@
 
 
 
-
-
-
-
-
-
-import { useState } from "react";
-import { View, Text, TextInput, Button } from "react-native";
-
-const API_URL = "https://abu-ai-taxi.onrender.com/chat";
+import { useState } from 'react';
+import { Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
-  const [userInput, setUserInput] = useState("");
-  const [response, setResponse] = useState("");
+  const [message, setMessage] = useState('');
+  const [reply, setReply] = useState('');
 
   const sendMessage = async () => {
-    try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: userInput,
-        }),
-      });
+    const res = await fetch('http://192.168.1.5:5000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message }),
+    });
 
-      const data = await res.json();
-      setResponse(data.reply);
-
-    } catch (error) {
-      setResponse("Server connection error");
-      console.log(error);
-    }
+    const data = await res.json();
+    setReply(data.reply);
   };
 
   return (
-    <View style={{ padding: 20, marginTop: 50 }}>
-      <Text style={{ fontSize: 24 }}>
-        AI Chat
-      </Text>
+    <View style={{ padding: 50 }}>
+      <Text>AI Chat</Text>
 
       <TextInput
-        value={userInput}
-        onChangeText={setUserInput}
-        placeholder="Type message"
-        style={{
-          borderWidth: 1,
-          marginVertical: 10,
-          padding: 10,
-        }}
+        placeholder="Type..."
+        value={message}
+        onChangeText={setMessage}
+        style={{ borderWidth: 1, margin: 10 }}
       />
 
       <Button title="Send" onPress={sendMessage} />
 
-      <Text style={{ marginTop: 20 }}>
-        {response}
-      </Text>
+      <Text>Reply: {reply}</Text>
     </View>
   );
 }
+
 
 
 
