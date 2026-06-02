@@ -59,7 +59,7 @@ export default function App() {
   const [response, setResponse] = useState("");
 
   const sendMessage = () => {
-    fetch("https://abu-ai-app.onrender.com/chat", {
+    fetch("https://abu-ai-taxi.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,5 +116,4 @@ export default function App() {
 
 
 
-+0
 

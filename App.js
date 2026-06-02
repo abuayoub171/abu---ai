@@ -22,7 +22,9 @@ export default function App() {
   const [reply, setReply] = useState('');
 
   const sendMessage = async () => {
-    const res = await fetch('http://192.168.1.5:5000/chat', {
+
+    const res = await fetch('https://abu-ai-taxi.onrender.com/chat', {
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message }),
