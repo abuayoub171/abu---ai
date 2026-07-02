@@ -24,7 +24,7 @@ export default function HomeScreen() {
 
   const sendMessage = async () => {
     try {
-      const res = await fetch("http://192.168.1.5:5000/chat", {
+      const res = await fetch("https://abu-ai-taxi-kyw0.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

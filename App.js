@@ -22,9 +22,7 @@ export default function App() {
   const [reply, setReply] = useState('');
 
   const sendMessage = async () => {
-
-    const res = await fetch('https://abu-ai-taxi.onrender.com/chat', {
-
+    const res = await fetch("https://abu-ai-taxi-kyw0.onrender.com/chat", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message }),
@@ -64,6 +62,8 @@ export default function App() {
 
 
 
-
 +0
+
+
+
 
